@@ -39,6 +39,12 @@ var vue3 = new Vue({
     data: {
         // 此處資料為布林值, true為顯示, false為隱藏
         test: true,
-        activity: false
+        activity: false,
     }
+});
+
+// 4. 迴圈
+// 官方文檔: https://vuejs.org/v2/guide/#Conditionals-and-Loops
+var vue4 = new Vue({
+    el: "#vue4"
 });
