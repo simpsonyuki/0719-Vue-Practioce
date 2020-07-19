@@ -57,3 +57,20 @@ var vue4 = new Vue({
        ]
     }
 });
+
+// 5. 使用者事件
+// 官方文檔: https://vuejs.org/v2/guide/#Handling-User-Input
+var vue5 = new Vue({
+    el: "#vue5",
+    // 定義資料
+    data: {
+        test:""
+    },
+    // 定義函式
+    // methods: { 函式名稱: function(){ 函式內容 } };
+    methods: {
+        click: function() {
+            this.test = "點到了~"
+        }
+    }
+});

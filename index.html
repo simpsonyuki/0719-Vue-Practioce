@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0719 Vue 課堂練習</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>1. 定義渲染區域</h1>
     <div id="vue1">
@@ -21,11 +23,11 @@
         <p>同時加入多個資料:</p>
         <p>
             <!-- 若兩個值皆為數字則會直接做運算 -->
-            {{a + b}}  
+            {{a + b}}
         </p>
         <p>
             <!-- 若值為文字字串則會直接接在後面 -->
-            {{a + c}}  
+            {{a + c}}
         </p>
     </div>
     <!-- 在渲染區域之外不會有作用 -->
@@ -40,7 +42,7 @@
     </div>
 
     <h1>3. 判斷式→ v-if="資料名稱"</h1>
-    
+
     <div id="vue3">
 
         <p v-if="test">我是段落文字</p>
@@ -52,8 +54,8 @@
         <!-- 若布林值為 false 則顯示↓ -->
         <div v-else="activity">活動已截止!</div>
     </div>
-    
-    
+
+
     <h1>3. 迴圈→ v-for="變數 in 次數"</h1>
     <div id="vue4">
         <!-- v-for="變數 in 次數" -->
@@ -72,7 +74,15 @@
     </div>
 
 
+    <h1>使用者事件</h1>
+    <div id="vue5">
+        <h2 v-on:click="click">點擊我你就會看到→ {{ test }} </h2>
+
+    </div>
+
+    <!-- Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
