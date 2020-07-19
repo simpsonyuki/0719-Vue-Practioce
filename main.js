@@ -46,5 +46,14 @@ var vue3 = new Vue({
 // 4. 迴圈
 // 官方文檔: https://vuejs.org/v2/guide/#Conditionals-and-Loops
 var vue4 = new Vue({
-    el: "#vue4"
+    el: "#vue4",
+    data: {
+        //資料名稱: [陣列]
+       products: [
+           {name:"紅茶", price: 30 },
+           {name:"奶茶", price: 50 },
+           {name:"咖啡", price: 70 },
+           {name:"牛奶", price: 80 },
+       ]
+    }
 });

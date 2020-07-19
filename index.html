@@ -56,7 +56,19 @@
     
     <h1>3. 迴圈→ v-for="變數 in 次數"</h1>
     <div id="vue4">
+        <!-- v-for="變數 in 次數" -->
         <a href="#" v-for="n in 8">分頁連結 {{ n }} </a>
+
+        <!-- v-for="變數 in 資料名稱(陣列)" -->
+        <div v-for="p in products">
+            <h3>
+                {{ p.name }}
+            </h3>
+            <h4>
+                價格: {{ p.price }}元
+            </h4>
+            <hr>
+        </div>
     </div>
 
 
