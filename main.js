@@ -81,3 +81,15 @@ var vue5 = new Vue({
         }
     }
 });
+
+
+// 6. 儲存使用者輸入之資訊
+var vue6 = new Vue ({
+    el: "#vue6",
+    // 資料{ 資料名稱 }
+    // 搭配html的v-model="資料名稱", 即可將使用者輸入的資料儲存於此
+    data: {
+        name: ""
+    }
+
+});
