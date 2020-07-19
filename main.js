@@ -84,6 +84,7 @@ var vue5 = new Vue({
 
 
 // 6. 儲存使用者輸入之資訊
+// 官方文檔: https://vuejs.org/v2/guide/#Handling-User-Input
 var vue6 = new Vue ({
     el: "#vue6",
     // 資料{ 資料名稱 }
