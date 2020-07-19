@@ -64,13 +64,20 @@ var vue5 = new Vue({
     el: "#vue5",
     // 定義資料
     data: {
-        test:""
+        test:"",
+        count: 0
     },
     // 定義函式
     // methods: { 函式名稱: function(){ 函式內容 } };
     methods: {
         click: function() {
             this.test = "點到了~"
+        },
+        add: function() {
+            this.count++;     //++遞增
+        },
+        minus: function() {
+            this.count--;     //--遞減
         }
     }
 });
