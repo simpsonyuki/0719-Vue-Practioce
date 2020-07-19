@@ -8,8 +8,19 @@
 </head>
 <body>
     <h1>定義渲染區域</h1>
-    <div id="vue1"></div>
+    <div id="vue1">
+        {{ text }}
+        <h3>
+            {{ text }}
+        </h3>
 
+        <h2>
+            {{ text }}
+        </h2>
+    </div>
+
+    <!-- 在渲染區域之外不會有作用 -->
+    {{ text }}
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>
