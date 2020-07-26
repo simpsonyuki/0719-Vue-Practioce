@@ -129,13 +129,14 @@ new Vue({
 });
 
 
-// 多行樣板實際應用
+// 多行樣板實際應用(放在html最上面)
 // 適合用在有重複區塊的多頁網頁-如: 導覽列、頁尾區塊等等
 Vue.component("navbar", {
     template: `
     <nav>
-        <a href="#">關於我</a>
+        <a href="./about.html">關於我</a>
         <a href="#">實際案例</a>
+        <a href="./index.html">回首頁LOGO</a>
         <a href="#">型錄下載</a>
         <a href="#">聯絡我</a>
     <nav>

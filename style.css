@@ -6,4 +6,20 @@
           box-sizing: border-box;
   font-family: 微軟正黑體;
 }
+
+#navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#navbar nav a {
+  color: indianred;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px 30px;
+}
 /*# sourceMappingURL=style.css.map */
