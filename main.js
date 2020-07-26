@@ -94,3 +94,10 @@ var vue6 = new Vue ({
     }
 
 });
+
+// 7. 定義元件(組件)
+// 官方文檔: https://vuejs.org/v2/guide/#Composing-with-Components
+// 寫法: Vue.component("元件名稱", { template: "樣板內容"});
+Vue.component("testComponent", {
+    template: "<h2>我是測試元件</h2>"
+});
