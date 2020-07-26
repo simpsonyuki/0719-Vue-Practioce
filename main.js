@@ -98,6 +98,29 @@ var vue6 = new Vue ({
 // 7. 定義元件(組件)
 // 官方文檔: https://vuejs.org/v2/guide/#Composing-with-Components
 // 寫法: Vue.component("元件名稱", { template: "樣板內容"});
-Vue.component("testComponent", {
+Vue.component("test-a", {
     template: "<h2>我是測試元件</h2>"
+});
+
+// new Vue 可以不再前加入變數直接使用, 前面加"var 變數名稱=~" 的好處是可以把資料儲存在變數內, 之後使用比較方便
+new Vue ({
+    el: "#vue7"
+});
+
+// 定義多行樣板元件
+// '' ""  單/雙引號: 單行html
+// ` ` 數字1的波浪點點: 多行html
+Vue.component("test-b", {
+    template: `
+        <h3>我是標題3</h3>
+        <p>來點什麼內容吧<p>
+        <ul>
+        <li>項目1</li>
+        <li>項目2</li>
+        </ul>
+    `
+});
+
+new Vue ({
+    el: "#vue8"
 });
