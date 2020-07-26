@@ -49,12 +49,12 @@ var vue4 = new Vue({
     el: "#vue4",
     data: {
         //資料名稱: [陣列]
-       products: [
-           {name:"紅茶", price: 30 },
-           {name:"奶茶", price: 50 },
-           {name:"咖啡", price: 70 },
-           {name:"牛奶", price: 80 },
-       ]
+        products: [
+            { name: "紅茶", price: 30 },
+            { name: "奶茶", price: 50 },
+            { name: "咖啡", price: 70 },
+            { name: "牛奶", price: 80 },
+        ]
     }
 });
 
@@ -64,19 +64,19 @@ var vue5 = new Vue({
     el: "#vue5",
     // 定義資料
     data: {
-        test:"",
+        test: "",
         count: 0
     },
     // 定義函式
     // methods: { 函式名稱: function(){ 函式內容 } };
     methods: {
-        click: function() {
+        click: function () {
             this.test = "點到了~"
         },
-        add: function() {
+        add: function () {
             this.count++;     //++遞增
         },
-        minus: function() {
+        minus: function () {
             this.count--;     //--遞減
         }
     }
@@ -85,7 +85,7 @@ var vue5 = new Vue({
 
 // 6. 儲存使用者輸入之資訊
 // 官方文檔: https://vuejs.org/v2/guide/#Handling-User-Input
-var vue6 = new Vue ({
+var vue6 = new Vue({
     el: "#vue6",
     // 資料{ 資料名稱 }
     // 搭配html的v-model="資料名稱", 即可將使用者輸入的資料儲存於此
@@ -103,24 +103,45 @@ Vue.component("test-a", {
 });
 
 // new Vue 可以不再前加入變數直接使用, 前面加"var 變數名稱=~" 的好處是可以把資料儲存在變數內, 之後使用比較方便
-new Vue ({
+new Vue({
     el: "#vue7"
 });
 
 // 定義多行樣板元件
 // '' ""  單/雙引號: 單行html
 // ` ` 數字1的波浪點點: 多行html
+// 使用多行樣板時, 須有一個父元素將內容包起來
 Vue.component("test-b", {
     template: `
+    <div>
         <h3>我是標題3</h3>
-        <p>來點什麼內容吧<p>
+        <p>來點什麼內容<p>
         <ul>
         <li>項目1</li>
         <li>項目2</li>
         </ul>
+    </div>
     `
 });
 
-new Vue ({
+new Vue({
     el: "#vue8"
+});
+
+
+// 多行樣板實際應用
+// 適合用在有重複區塊的多頁網頁-如: 導覽列、頁尾區塊等等
+Vue.component("navbar", {
+    template: `
+    <nav>
+        <a href="#">關於我</a>
+        <a href="#">實際案例</a>
+        <a href="#">型錄下載</a>
+        <a href="#">聯絡我</a>
+    <nav>
+    `
+});
+
+new Vue({
+    el: "#navbar"
 });
